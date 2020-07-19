@@ -11,7 +11,7 @@ export default function Home() {
         <section class="hero">
           <div class="hero-body">
             <div class="container">
-              <img className="mb-6" src="/images/logo.png" width="112" height="28" />
+              <img className="mb-6" src="/images/Logo.png" width="112" height="28" />
               <h1 class="title">
                 Join over 50 millions people <br/> sharing recipes everyday
               </h1>
