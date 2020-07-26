@@ -26,7 +26,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="column is-one-quarter">
-                < button className="button is-success is-fullwidth is-outlined">Learn More</button>
+                <button className="button is-success is-fullwidth is-outlined">Learn More</button>
                 </div>
               </div>
             </div>

@@ -6,20 +6,20 @@ import Link from 'next/link'
 import Input from '../components/Form/Input'
 import Button from '../components/Form/Button'
 
-export default function Login() {
-    const initState = {email:'', password: ''};
+export default function Register() {
+    const initState = {fullname:'', email: '', password: ''};
 
-    const [login, setLogin] = useState(initState);
+    const [register, setRegister] = useState(initState);
 
     const handleChange = e => {
         const {name, value} = e.target;
-        setLogin({...login, [name]: value});
+        setRegister({...register, [name]: value});
     };
 
     return (
         <div className="login-background">
             <Head>
-                <title>Login</title>
+                <title>Register</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <section className="container">
@@ -30,18 +30,19 @@ export default function Login() {
                                 <img className="mb-6" src="/images/Logo-login.png" width="200" height="58" />
                             </div>
                             <div className="column right">
-                                <h1 className="title is-4">Welcome Back!</h1>
-                                <h4 className="subtitle">Please login to continue.</h4>
+                                <h1 className="title is-4">Start from Scracth</h1>
+                                <h4 className="subtitle">Create Account to continue.</h4>
 
                                 <form>
-                                    <Input label="Email address" type="text" name="email" value={login.email} placeholder="user@mail.com" onChange={handleChange} />
-                                    <Input label="Password" type="password" name="password" value={login.password} placeholder="password" onChange={handleChange} />
-                                    <Button label="Login" className="button is-success is-fullwidth" />
+                                    <Input label="Full Name" type="text" name="fullname" value={register.fullname} placeholder="John Doe" onChange={handleChange} />
+                                    <Input label="Email address" type="text" name="email" value={register.email} placeholder="user@mail.com" onChange={handleChange} />
+                                    <Input label="Password" type="password" name="password" value={register.password} placeholder="password" onChange={handleChange} />
+                                    <Button label="Sign Up" className="button is-success is-fullwidth" />
                                 </form>
-                                <p className="mt-6 has-text-centered is-size-6 has-text-grey">New to Scaratch?</p>
+                                <p className="mt-6 has-text-centered is-size-6 has-text-grey">Already have account?</p>
                                 <p className="mt-1 has-text-centered is-size-6 has-text-grey">
-                                    <Link href="/register">
-                                        <a>Create Acccount Here</a>
+                                    <Link href="/login">
+                                        <a>Login Here</a>
                                     </Link>
                                 </p>
                             </div>
